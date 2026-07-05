@@ -1235,3 +1235,224 @@ img{max-width:100%;display:block}
     animation: none !important;
   }
 }
+/* ===============================
+   MOBILE HERO FIX LIKE IMAGE 2
+   Paste at END of style.css
+   =============================== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    width: min(100% - 32px, 1160px) !important;
+  }
+
+  /* Header mobile */
+  .header {
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 8px 28px rgba(23, 35, 27, 0.06) !important;
+  }
+
+  .nav {
+    min-height: 82px !important;
+  }
+
+  .logo img {
+    height: 52px !important;
+    width: auto !important;
+    max-width: 160px !important;
+    object-fit: contain !important;
+  }
+
+  .menu-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 58px !important;
+    height: 58px !important;
+    border-radius: 18px !important;
+    background: rgba(47, 155, 82, 0.10) !important;
+  }
+
+  .menu-btn span {
+    width: 28px !important;
+    height: 3px !important;
+    margin: 4px auto !important;
+    background: var(--green-dark) !important;
+  }
+
+  .nav-menu {
+    top: 82px !important;
+    left: 16px !important;
+    right: 16px !important;
+  }
+
+  /* Hero mobile layout */
+  .hero {
+    min-height: auto !important;
+    padding: 70px 0 64px !important;
+    display: block !important;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 241, 223, 0.96),
+        rgba(233, 248, 239, 0.94)
+      ) !important;
+  }
+
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .label {
+    padding: 9px 16px !important;
+    font-size: 13px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 14vw, 72px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.055em !important;
+    margin-bottom: 26px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-copy p {
+    font-size: 22px !important;
+    line-height: 1.65 !important;
+    max-width: 100% !important;
+    margin-bottom: 34px !important;
+    color: #66746a !important;
+  }
+
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    margin-bottom: 42px !important;
+  }
+
+  .hero-actions .btn {
+    width: 100% !important;
+    min-height: 68px !important;
+    border-radius: 999px !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
+  }
+
+  .hero-actions .primary {
+    background: linear-gradient(135deg, var(--orange), var(--green)) !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 38px rgba(255, 138, 0, 0.22) !important;
+  }
+
+  .hero-actions .outline {
+    background: #ffffff !important;
+    color: var(--green-dark) !important;
+    border: 1px solid rgba(47, 155, 82, 0.12) !important;
+    box-shadow: 0 16px 36px rgba(47, 155, 82, 0.10) !important;
+  }
+
+  /* Hide desktop right-side circle/cards on mobile */
+  .hero-showcase,
+  .hero-orbit-wrap,
+  .orbit-ring,
+  .logo-circle,
+  .floating-service-card,
+  .hero-panel,
+  .clinical-dashboard-card,
+  .hero-floating-pill {
+    display: none !important;
+  }
+
+  /* Show assessment cards like image 2 */
+  .trust-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    max-width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .trust-row div {
+    padding: 28px !important;
+    border-radius: 26px !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(47, 155, 82, 0.10) !important;
+    box-shadow: 0 20px 46px rgba(47, 155, 82, 0.10) !important;
+  }
+
+  .trust-row span {
+    font-size: 18px !important;
+    color: var(--orange) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .trust-row strong {
+    font-size: 28px !important;
+    color: var(--green-dark) !important;
+    margin-bottom: 8px !important;
+  }
+
+  .trust-row small {
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    color: var(--muted) !important;
+  }
+
+  /* WhatsApp button mobile */
+  .whatsapp-float {
+    right: 22px !important;
+    bottom: 92px !important;
+    width: 70px !important;
+    height: 70px !important;
+    z-index: 9999 !important;
+  }
+
+  .whatsapp-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: calc(100% - 28px) !important;
+  }
+
+  .hero h1 {
+    font-size: 58px !important;
+  }
+
+  .hero-copy p {
+    font-size: 20px !important;
+  }
+
+  .hero-actions .btn {
+    min-height: 64px !important;
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 50px !important;
+  }
+
+  .hero-copy p {
+    font-size: 18px !important;
+  }
+}
