@@ -1011,3 +1011,227 @@ img{max-width:100%;display:block}
     transform:translateY(-4px);
   }
 }
+
+/* ===============================
+   FIXED HOMEPAGE HERO RIGHT SIDE
+   =============================== */
+
+.hero-showcase {
+  position: relative !important;
+  min-height: 540px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero-orbit-wrap {
+  position: relative !important;
+  width: 460px !important;
+  height: 460px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.orbit-ring {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 460px !important;
+  height: 460px !important;
+  border-radius: 50% !important;
+  background: conic-gradient(
+    from 210deg,
+    var(--orange),
+    #c6a51c,
+    var(--green),
+    var(--orange)
+  ) !important;
+  box-shadow: 0 28px 70px rgba(47, 155, 82, 0.12) !important;
+  animation: slowSpin 22s linear infinite !important;
+}
+
+.orbit-ring::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.orbit-ring::after {
+  content: "";
+  position: absolute;
+  inset: 45px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 138, 0, 0.32);
+}
+
+.logo-circle {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 285px !important;
+  height: 285px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 24px 55px rgba(47, 155, 82, 0.10) !important;
+}
+
+.logo-circle img {
+  width: 190px !important;
+  height: auto !important;
+  max-width: 190px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.floating-service-card {
+  position: absolute !important;
+  z-index: 5 !important;
+  width: 285px !important;
+  min-height: 86px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 16px 18px !important;
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(47, 155, 82, 0.12) !important;
+  box-shadow: 0 22px 50px rgba(47, 155, 82, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  animation: floatingCard 5s ease-in-out infinite !important;
+}
+
+.card-meal {
+  left: -30px !important;
+  top: 85px !important;
+}
+
+.card-clinical {
+  right: -30px !important;
+  bottom: 86px !important;
+  animation-delay: 1.3s !important;
+}
+
+.service-mini-icon {
+  flex: 0 0 auto !important;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 138, 0, 0.13),
+    rgba(47, 155, 82, 0.13)
+  ) !important;
+  color: var(--green) !important;
+}
+
+.service-mini-icon svg {
+  width: 30px !important;
+  height: 30px !important;
+  display: block !important;
+}
+
+.floating-service-card strong {
+  display: block !important;
+  color: #263326 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+}
+
+.floating-service-card small {
+  display: block !important;
+  color: var(--muted) !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  margin-top: 4px !important;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatingCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-showcase {
+    min-height: 520px !important;
+  }
+
+  .hero-orbit-wrap {
+    width: 420px !important;
+    height: 420px !important;
+  }
+
+  .orbit-ring {
+    width: 420px !important;
+    height: 420px !important;
+  }
+
+  .card-meal {
+    left: -10px !important;
+  }
+
+  .card-clinical {
+    right: -10px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-showcase {
+    min-height: auto !important;
+    display: block !important;
+  }
+
+  .hero-orbit-wrap {
+    width: 310px !important;
+    height: 310px !important;
+    margin: 0 auto 26px !important;
+  }
+
+  .orbit-ring {
+    width: 310px !important;
+    height: 310px !important;
+  }
+
+  .logo-circle {
+    width: 205px !important;
+    height: 205px !important;
+  }
+
+  .logo-circle img {
+    width: 145px !important;
+    max-width: 145px !important;
+  }
+
+  .floating-service-card {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+    animation: none !important;
+  }
+}
