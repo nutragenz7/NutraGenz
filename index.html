@@ -333,36 +333,32 @@
           <p>Fill the form below and your appointment request will be sent directly to NutraGenz.</p>
         </div>
 
-        <form class="appointment-form reveal" id="appointmentForm" action="https://formsubmit.co/nutragenz7@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New NutraGenz Appointment Request">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="form-row">
+        <form class="appointment-form reveal" id="appointmentForm">
+<div class="form-row">
             <label for="name">Full Name</label>
-            <input id="name" name="Full Name" type="text" placeholder="Enter your name" required>
+            <input id="name" name="from_name" type="text" placeholder="Enter your name" required>
           </div>
 
           <div class="form-row two-col">
             <div>
               <label for="email">Email</label>
-              <input id="email" name="Email" type="email" placeholder="Enter your email" required>
+              <input id="email" name="from_email" type="email" placeholder="Enter your email" required>
             </div>
             <div>
               <label for="phone">Phone / WhatsApp</label>
-              <input id="phone" name="Phone / WhatsApp" type="tel" placeholder="03XX XXXXXXX" required>
+              <input id="phone" name="phone" type="tel" placeholder="03XX XXXXXXX" required>
             </div>
           </div>
 
           <div class="form-row two-col">
             <div>
               <label for="service">Service</label>
-              <select id="service" name="Service Needed" required>
+              <select id="service" name="service" required>
                 <option value="">Select service</option>
                 <option>Weight Management</option>
                 <option>Diabetes Nutrition Therapy</option>
                 <option>Cardiovascular Nutrition Therapy</option>
-                <option>Hepatic Tutrition Therapy</option>
+                <option>Hepatic Nutrition Therapy</option>
                 <option>Renal Nutrition Therapy</option>
                 <option>Maternal & Pediatric Nutrition</option>
                 <option>Online Nutrition Consultation</option>
@@ -370,7 +366,7 @@
             </div>
             <div>
               <label for="mode">Mode</label>
-              <select id="mode" name="Consultation Mode" required>
+              <select id="mode" name="mode" required>
                 <option value="">Select mode</option>
                 <option>Online Consultation</option>
                 <option>Clinic Consultation</option>
@@ -381,12 +377,12 @@
 
           <div class="form-row">
             <label for="date">Preferred Date</label>
-            <input id="date" name="Preferred Date" type="date">
+            <input id="date" name="date" type="date">
           </div>
 
           <div class="form-row">
             <label for="message">Message</label>
-            <textarea id="message" name="Message" rows="5" placeholder="Write your concern or goal" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Write your concern or goal" required></textarea>
           </div>
 
           <button class="btn primary full" type="submit">Send Appointment Request</button>
@@ -445,6 +441,7 @@
 </a>
   <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
